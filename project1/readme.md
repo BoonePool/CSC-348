@@ -2,6 +2,6 @@
 1.2 was a bit less easy, I used the characters in the result to iterate through the keyword, then normalized the char by subtracting 32 and used it as the shift.
 2.1 the work is in the PDF
 2.2 the frequencey analysis is done by initilizing the dictionary to zero then adding 1/the length each time it occurs.
-2.3 This took a bit of reading but I just multiplied the corresponding frequencies and summed them
+2.3 This took a bit of reading but I just multiplied the corresponding frequencies and summed them for Set 1 and 2:  0.003098 and Set 1 and 3:  0.00254 this shows that set 1 and 2 are share a closer distribution. 
 2.4 for cracking the encyption I just calculated cross correlation for all possible shifts and took the max
 2.5 for cracking vigenere I just took every nth char where n is the length of the key and did a ceasar crack on it

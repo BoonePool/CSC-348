@@ -5,7 +5,7 @@ def ceasar_encrypt(plaintext, shift, encrypt):
     if not encrypt: # invert shift for decryption
         shift = -shift
     for char in plaintext:
-        num = ((ord(char) + shift -min) % (max - min)) + min # gets ascii value of char and normalizes it to 32-126
+        num = ((ord(char) + shift -min) % (max - min +1)) + min # gets ascii value of char and normalizes it to 32-126
         encrypted += chr(num)
     return encrypted
 # print(ceasar_encrypt("Hello, World!", 3, True))

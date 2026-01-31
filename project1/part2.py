@@ -1,13 +1,4 @@
-def ceasar_encrypt(plaintext, shift, encrypt):
-    encrypted = "" 
-    min = 32 # Max and min ascii values
-    max = 126
-    if not encrypt: # invert shift for decryption
-        shift = -shift
-    for char in plaintext:
-        num = ((ord(char) + shift -min) % (max - min)) + min # gets ascii value of char and normalizes it to 32-126
-        encrypted += chr(num)
-    return encrypted
+from part1 import ceasar_encrypt
 def frequency_analysis(text):
     frequency = {' ': 0,'E': 0, 'T': 0, 'A': 0, 'O': 0, 'N': # initialize frequencies 
 0, 'I': 0,'S': 0,'R': 0,'H': 0,'L': 0,'D':

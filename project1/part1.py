@@ -8,8 +8,8 @@ def ceasar_encrypt(plaintext, shift, encrypt):
         num = ((ord(char) + shift -min) % (max - min)) + min # gets ascii value of char and normalizes it to 32-126
         encrypted += chr(num)
     return encrypted
-print(ceasar_encrypt("Hello, World!", 3, True))
-print(ceasar_encrypt("Khoor/#Zruog$", 3, False))
+# print(ceasar_encrypt("Hello, World!", 3, True))
+# print(ceasar_encrypt("Khoor/#Zruog$", 3, False))
 
 def vigenere_cipher(message, keyword, encrypt):
     result = ""
@@ -21,5 +21,5 @@ def vigenere_cipher(message, keyword, encrypt):
         result += ceasar_encrypt(char, shift, encrypt)
     return result
 
-print(vigenere_cipher("Hello, World!", "testkeyword", True))
-print(vigenere_cipher(">Lab\qyP`fRZf", "testkeyword", False))
+# print(vigenere_cipher("Hello, World!", "testkeyword", True))
+# print(vigenere_cipher(">Lab\qyP`fRZf", "testkeyword", False))

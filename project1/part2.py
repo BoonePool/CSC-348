@@ -23,10 +23,6 @@ def cross_correlation(freq1, freq2): # computes cross-correlation between two fr
     for s in freq1:
         total += freq1[s] * freq2[s]
     return total
-print("Set 1 and 2: " , cross_correlation({'A': 0.012, 'B': 0.003, 'C' : .01, 'D' : .1,'E': .02, 'F':.001}, 
-                        {'A': 0.001, 'B': 0.012, 'C' : .003, 'D' : .01,'E': .1, 'F':.02}))
-print("Set 1 and 3: " , cross_correlation({'A': 0.012, 'B': 0.003, 'C' : .01, 'D' : .1,'E': .02, 'F':.001},
-                                          {'A': 0.1, 'B': 0.02, 'C' : .001, 'D' : .012,'E': .003, 'F':.01}))
 
 def get_ceasar_shift(ciphertext, exp): # determines the likely shift used to encrypt the message based on expected frequency distribution
     corr = []
@@ -53,5 +49,3 @@ def get_vigenere_keyword(ciphertext, keyword_length, exp):
         shift = get_ceasar_shift(segment, exp)
         keyword += chr(shift + 32)
     return keyword
-
-
